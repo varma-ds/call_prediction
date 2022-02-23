@@ -1,0 +1,43 @@
+{
+    "seed": 42,
+
+    "data": {
+        "utt_corpus": "utt_calldata_0.1.csv",
+        "call_corpus": "calldata_0.1.csv"
+    },
+
+    "utt_model_config": {
+        "model_arch": "bert-base-uncased",
+        "max_seq_len" : 60,
+        "dropout": 0.2,
+        "hid_dim1": 256,
+        "hid_dim2": 64
+    },
+    
+    "hibert_model_config": {
+        "nhead": 8,
+        "nlayers": 2,
+        "max_sents": 20,
+        "max_seq_len" : 50,
+        "dropout": 0.2,
+        "alpha1": 1,
+        "alpha2": 1,
+        "alpha3": 1
+    },
+    
+    "device": "cpu",
+    "learning_rate": 1e-5,
+    "utt_batch_size": 16,
+    "num_epochs": 2,
+    "log_steps": 4,
+
+    "metrics": [
+        "utt_reasoncode_accuracy"
+    ],
+
+    "call_metrics": [
+        "call_reason_accuracy",
+        "marked_accuracy"
+    ]
+
+}
